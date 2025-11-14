@@ -1,0 +1,13 @@
+build:
+  maxIssues: 0
+
+config:
+  validation: true
+  
+formatting:
+  MaximumLineLength:
+    maxLineLength: 120
+
+style:
+  ReturnCount:
+    max: 3

@@ -13,8 +13,8 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.ui.platform.testTag
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
@@ -45,8 +45,11 @@ fun MapScreen(
                 }
             ) {
                 Icon(
-                    imageVector = if (viewModel.state.isFalloutMap) Icons.Default.ToggleOff
-                    else Icons.Default.ToggleOn,
+                    imageVector = if (viewModel.state.isFalloutMap) {
+                        Icons.Default.ToggleOff
+                    } else {
+                        Icons.Default.ToggleOn
+                    },
                     contentDescription = "Toggle Fallout Map",
                 )
             }
@@ -55,7 +58,8 @@ fun MapScreen(
         GoogleMap(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding),
+                .padding(innerPadding)
+                .testTag("map"),
             properties = viewModel.state.properties,
             uiSettings = uiSettings,
             onMapLongClick = {
@@ -81,10 +85,10 @@ fun MapScreen(
                     },
                     icon = BitmapDescriptorFactory.defaultMarker(
                         BitmapDescriptorFactory.HUE_GREEN
-                    )
+                    ),
+                    contentDescription = "Parking Spot"
                 )
             }
         }
     }
-
 }

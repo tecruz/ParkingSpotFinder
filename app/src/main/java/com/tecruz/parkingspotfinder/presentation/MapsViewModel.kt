@@ -37,7 +37,9 @@ class MapsViewModel @Inject constructor(
                     properties = state.properties.copy(
                         mapStyleOptions = if (state.isFalloutMap) {
                             null
-                        } else MapStyleOptions(MapStyle.json)
+                        } else {
+                            MapStyleOptions(MapStyle.json)
+                        }
                     ),
                     isFalloutMap = !state.isFalloutMap
                 )
