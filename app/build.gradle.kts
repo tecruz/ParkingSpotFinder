@@ -51,8 +51,10 @@ android {
 }
 
 detekt {
-    config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+    config.setFrom(files("$rootDir/detekt/detekt.yml"))
 }
+
+apply(from = "../jacoco.gradle.kts")
 
 dependencies {
     implementation(libs.androidx.material.icons.extended)
@@ -91,5 +93,3 @@ dependencies {
 
     detektPlugins(libs.detekt.formatting)
 }
-
-apply(from = "../config/jacoco/jacoco.gradle.kts")
