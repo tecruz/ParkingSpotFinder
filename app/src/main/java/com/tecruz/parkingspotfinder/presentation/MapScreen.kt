@@ -44,13 +44,11 @@ fun MapScreen(
                     viewModel.onEvent(MapEvent.ToggleFalloutMap)
                 }
             ) {
+                val isFalloutMap = viewModel.state.isFalloutMap
                 Icon(
-                    imageVector = if (viewModel.state.isFalloutMap) {
-                        Icons.Default.ToggleOff
-                    } else {
-                        Icons.Default.ToggleOn
-                    },
-                    contentDescription = "Toggle Fallout Map",
+                    imageVector = if (isFalloutMap) Icons.Default.ToggleOff
+                    else Icons.Default.ToggleOn,
+                    contentDescription = if (isFalloutMap) "Disable Fallout Map" else "Enable Fallout Map",
                 )
             }
         }
@@ -91,4 +89,5 @@ fun MapScreen(
             }
         }
     }
+
 }
