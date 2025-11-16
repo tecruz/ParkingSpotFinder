@@ -4,12 +4,14 @@ This is an Android application that allows users to find and mark parking spots 
 
 ## Badges
 
-<!-- Add your badges here -->
-[![CI](https://github.com/tecruz/parking-spot-finder/actions/workflows/ci.yml/badge.svg)](https://github.com/tecruz/parking-spot-finder/actions/workflows/ci.yml)
+[![Android CI](https://github.com/tecruz/ParkingSpotFinder/actions/workflows/android_ci.yml/badge.svg)](https://github.com/tecruz/ParkingSpotFinder/actions/workflows/android_ci.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tecruz_ParkingSpotFinder&metric=alert_status&token=6e724044ef05dd5abaf8f726a4d1140081793c86)](https://sonarcloud.io/summary/new_code?id=tecruz_ParkingSpotFinder)
+[![codecov](https://codecov.io/gh/tecruz/ParkingSpotFinder/graph/badge.svg?token=lJ8xhAZsgH)](https://codecov.io/gh/tecruz/ParkingSpotFinder)
+
 
 ## Screenshots
+<img width="270" height="600" alt="Screenshot_20251116_113304" src="https://github.com/user-attachments/assets/c717a129-2c30-4dc9-ab86-349634cc2167" />
 
-<!-- Add your screenshots here -->
 
 ## Building the Project
 
