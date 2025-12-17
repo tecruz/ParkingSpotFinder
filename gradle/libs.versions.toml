@@ -19,7 +19,7 @@ turbine = "1.2.1"
 coreTesting = "2.2.0"
 detekt = "1.23.8"
 ktlint = "14.0.1"
-mockk = "1.14.6"
+mockk = "1.14.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
